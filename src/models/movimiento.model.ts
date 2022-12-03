@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany} from '@loopback/repository';
+import {DetArtEntrada} from './det-art-entrada.model';
 
 @model()
 export class Movimiento extends Entity {
@@ -27,6 +28,13 @@ export class Movimiento extends Entity {
   })
   cantidad: number;
 
+  @hasMany(() => DetArtEntrada)
+  detArtEntradas: DetArtEntrada[];
+
+  @property({
+    type: 'string',
+  })
+  detArtEntradaId?: string;
 
   constructor(data?: Partial<Movimiento>) {
     super(data);

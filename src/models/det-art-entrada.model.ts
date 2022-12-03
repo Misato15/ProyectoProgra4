@@ -1,4 +1,7 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany} from '@loopback/repository';
+import {IngresoLote} from './ingreso-lote.model';
+import {Articulo} from './articulo.model';
+import {Movimiento} from './movimiento.model';
 
 @model()
 export class DetArtEntrada extends Entity {
@@ -33,6 +36,19 @@ export class DetArtEntrada extends Entity {
   })
   cantidad: number;
 
+  @hasMany(() => IngresoLote)
+  ingresoLotes: IngresoLote[];
+
+  @hasMany(() => Articulo)
+  articulos: Articulo[];
+
+  @property({
+    type: 'string',
+  })
+  movimientoId?: string;
+
+  @hasMany(() => Movimiento)
+  movimientos: Movimiento[];
 
   constructor(data?: Partial<DetArtEntrada>) {
     super(data);

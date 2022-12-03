@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany} from '@loopback/repository';
+import {IngresoLote} from './ingreso-lote.model';
 
 @model()
 export class Usuario extends Entity {
@@ -21,6 +22,8 @@ export class Usuario extends Entity {
   })
   nivel_acc: number;
 
+  @hasMany(() => IngresoLote)
+  ingresoLotes: IngresoLote[];
 
   constructor(data?: Partial<Usuario>) {
     super(data);

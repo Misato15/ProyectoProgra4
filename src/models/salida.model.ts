@@ -45,6 +45,15 @@ export class Salida extends Entity {
   })
   autorizacion: boolean;
 
+  @property({
+    type: 'string',
+  })
+  detalleArtSalidaId?: string;
+
+  @property({
+    type: 'string',
+  })
+  ingresoLoteId?: string;
 
   constructor(data?: Partial<Salida>) {
     super(data);

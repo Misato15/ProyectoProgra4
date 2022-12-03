@@ -27,6 +27,10 @@ export class Categoria extends Entity {
   })
   industria: string;
 
+  @property({
+    type: 'string',
+  })
+  ingresoLoteId?: string;
 
   constructor(data?: Partial<Categoria>) {
     super(data);

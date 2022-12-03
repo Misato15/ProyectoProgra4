@@ -6,4 +6,13 @@ export * from './ingreso-lote.controller';
 export * from './movimiento.controller';
 export * from './salida.controller';
 export * from './usuario.controller';
-
+export * from './det-art-entrada-ingreso-lote.controller';
+export * from './det-art-entrada-articulo.controller';
+export * from './movimiento-det-art-entrada.controller';
+export * from './det-art-entrada-movimiento.controller';
+export * from './detalle-art-salida-articulo.controller';
+export * from './detalle-art-salida-salida.controller';
+export * from './ingreso-lote-articulo.controller';
+export * from './ingreso-lote-categoria.controller';
+export * from './ingreso-lote-salida.controller';
+export * from './usuario-ingreso-lote.controller';

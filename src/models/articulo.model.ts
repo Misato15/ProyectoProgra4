@@ -45,6 +45,20 @@ export class Articulo extends Entity {
   })
   costo: number;
 
+  @property({
+    type: 'string',
+  })
+  detArtEntradaId?: string;
+
+  @property({
+    type: 'string',
+  })
+  detalleArtSalidaId?: string;
+
+  @property({
+    type: 'string',
+  })
+  ingresoLoteId?: string;
 
   constructor(data?: Partial<Articulo>) {
     super(data);

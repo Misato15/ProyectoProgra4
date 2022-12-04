@@ -49,13 +49,17 @@
     "!*/__tests__"
   ],
   "dependencies": {
+    "@angular-devkit/core": "^15.0.2",
+    "@angular-devkit/schematics": "^15.0.2",
     "@loopback/boot": "^5.0.5",
     "@loopback/core": "^4.0.5",
     "@loopback/repository": "^5.1.0",
     "@loopback/rest": "^12.0.5",
     "@loopback/rest-explorer": "^5.0.5",
     "@loopback/service-proxy": "^5.0.5",
+    "@schematics/angular": "^9.1.0",
     "loopback-connector-mongodb": "^5.6.0",
+    "ng-zorro-antd": "^14.2.1",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
